@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>consultar vuelos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>idvuelo</th>
+                <th>idavion	</th>
+                <th>idruta</th>
+                <th>fecha_salida</th>
+                <th>estado</th>
+            </tr>
+            </thead>
+        <tbody>
+        <tr th:each="vuelos:${vuelos}">
+            <td th:text="${vuelos.id}"></td>
+            <td>${vuelos.idavion}</td>
+            <td>${vuelos.idruta}</td>
+            <td>${vuelos.fecha_salida}</td>
+            <td>${vuelos.estado}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
